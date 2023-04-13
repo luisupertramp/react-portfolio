@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Components
+import SkillCard from './components/SkillCard';
+
 // Icons
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
@@ -35,30 +38,37 @@ function App() {
         </head>
 
         <main className=' bg-white px-10 text-black md:px-20 dark:bg-neutral-800 dark:text-white'>
-          <section className='min-h-screen'>
 
+          <section className=' min-h-screen'>
             {/* Navigation bar */}
-            <nav className='py-10 mb-12 flex justify-between dark:text-zinc-200'>
+            <nav className='py-10 flex justify-between dark:text-zinc-200'>
               <h1 className=' text-xl font-burtons'>My resume</h1>
               <ul className='flex items-center'>
                 <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/></li>
-                <li><a className=' bg-gradient-to-b from-cyan-500 to-cyan-600 dark:from-green-600 dark:to-green-700 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li>
+                <li><a className=' bg-gradient-to-b from-cyan-500 to-cyan-600 dark:from-green-600 dark:to-green-700 text-white px-4 py-2 rounded ml-8' href="#">
+                  PDF version
+                </a></li>
               </ul>
             </nav>
 
             {/* Personal info */}
-            <div className=' text-center p-10 '>
+            <div className=' text-center p-8 '>
               <h2 className=' text-5xl py-2 text-teal-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
               <h3 className='text-2xl py-2 md:text-3xl'>Software engineer</h3>
-              <p className=' mx-auto text-md py-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
+              <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
                 Hi, welcome to my online resume. I am a software engineer passionate about technology and innovation. I enjoy learning new things all the time. My experience in application development and support roles has led me to prepare for Cloud Computing.
                 <br/>
-                Listening to music, taking long walks and hanging out with my friends are a few of my favorite activities to do. Please send me your favourite songs, I'm definitely going to listen to them :{')'}
+                Listening to music, taking long walks and hanging out with my friends are a few of my favorite activities to do. 
               </p>
             </div>
 
+            {/* Avatar */}
+            <div className='relative mx-auto bg-gradient-to-b from-teal-500  dark:from-green-500 rounded-full w-60 h-60 mt-1 '>
+              <img src={memoji} width={180} height={180} className="mx-auto pt-3"/>
+            </div>
+
             {/* Icons */}
-            <div className=' text-5xl flex justify-center gap-16 py-3 text-gray-600  dark:text-zinc-200' >
+            <div className=' my-8 text-5xl flex justify-center gap-16  text-gray-600  dark:text-zinc-200' >
               <a href="https://www.linkedin.com/in/luispedrozaa/" target={'_blank'}><AiFillLinkedin className='transition transform hover:scale-150'/></a>
               <a href="https://github.com/luisupertramp" target={'_blank'}><AiFillGithub className='transition transform hover:scale-150'/></a>
             </div>
@@ -66,6 +76,29 @@ function App() {
 
           <section className='mt-10'>
 
+            {/* Skills */}
+            <div className='pb-24'>
+              <h3 className='text-3xl py-5'>Skills</h3>
+              
+              <div className='flex w-full justify-around'>
+                <SkillCard name="React" exp={3} know={2} />
+                <SkillCard name="JS, HTML & CSS" exp={3} know={3}/>
+              </div>
+              <div className='flex w-full justify-around'>
+                <SkillCard name="Material UI" exp={2} know={2}/>
+                <SkillCard name="CSS" exp={3} know={3}/>
+              </div>
+              <div className='flex w-full justify-around'>
+                <SkillCard name="Linux" exp={2} know={4}/>
+                <SkillCard name="Git" exp={3} know={2}/>
+              </div>
+              <div className='flex w-full justify-around'>
+                <SkillCard name="Python" exp={3} know={4}/>
+                <SkillCard name="AWS" exp={1} know={3}/>
+              </div>
+                
+            </div>
+            
             {/* Professional experience */}
             <div>
               <h3 className='text-3xl py-1'>Professional experience</h3>
@@ -79,7 +112,7 @@ function App() {
             <div className="lg:flex gap-10">
 
               {/* Support Engineer */}
-              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-neutral-600 flex-1">
+              <div className="text-center shadow-lg p-10 rounded my-10  dark:bg-neutral-600 flex-1">
                 <img className='mx-auto' src={support} width={100} height={100} />
 
                 <h3 className="text-lg font-medium pt-8 pb-2  ">
@@ -142,16 +175,12 @@ function App() {
             <div>
               <h3 className='text-3xl py-1 '>About me</h3>
               <p className=' text-md py-5 leading-8 text-gray-800 dark:text-zinc-200'>
-                I am 27 years old, Mex·<b>I·Can</b> software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
+                I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
                 I enjoy listening to audiobooks, photography, hiking and spending some time in nature.
                 I am in the process of learning all necessary skills to become a DevOps egineer, so if you know of any position related to that field, or have any other inquirie, feel free to reach me at <a href="mailto:luisfpedrozaa@gmail.com" className='underline text-cyan-600 dark:text-green-500'>luisfpedrozaa@gmail.com</a> or DM me via LinkedIn for a quicker reply.
               </p>
             </div>
 
-            {/* Avatar */}
-            <div className='relative mx-auto bg-gradient-to-b from-teal-500  dark:from-green-500 rounded-full w-60 h-60 mt-1 '>
-              <img src={memoji} width={180} height={180} className="mx-auto pt-3"/>
-            </div>
           </section>
 
           {/* Courses */}
