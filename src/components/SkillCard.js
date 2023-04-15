@@ -24,11 +24,17 @@ const SkillCard = (props)  => {
     const [expand, setExpand] = useState(false)
 
     return (
-        <div className="p-3 my-2 mx-2 h-min w-1/2 text-center shadow-lg rounded border dark:hover:shadow-lime-500/20 hover:shadow-cyan-600/20 transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
+        <div className="p-3 my-2 mx-2 h-min w-1/2 text-center shadow-lg rounded border dark:hover:border-green-600 hover:border-2 hover:border-cyan-500  transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
             <div className="mb-3"><b>{props.name}</b></div>
-            <div className='mb-3'>
-                <span className="flex justify-center my-1"> <p className="mr-3" >Experience: </p> {expBars(props.exp)} </span>
-                <span className="flex justify-center my-1"> <p className="mr-3" >Knowledge: </p> {expBars(props.know)} </span>
+            <div className='mb-3 flex justify-center flex-col'>
+                <div className=" my-1"> 
+                    <p className="mr-3" > Experience: </p> 
+                    {expBars(props.exp)} 
+                </div>
+                <div className=" my-1"> 
+                    <p className="mr-3" > Knowledge: </p> 
+                    {expBars(props.know)} 
+                </div>
             </div>
 
             { props.topics && 
@@ -41,13 +47,13 @@ const SkillCard = (props)  => {
                             })}
                         </ul>
                     </div>
-
-                    <BsChevronCompactDown onClick={()=>{setExpand(!expand)}} className={(expand ? "hidden " : "") +  " m-auto cursor-pointer w-full"}/>
-                    <BsChevronCompactUp onClick={()=>{setExpand(!expand)}} className={(expand ? "" : "hidden") +  " m-auto cursor-pointer w-full"}/>
                 </>
             }
+
+            <BsChevronCompactDown onClick={props.topics ? ()=>{setExpand(!expand)} : null } className={(expand ? "hidden " : "") + (props.topics ? "" : "dark:text-neutral-600 text-neutral-300") + " m-auto cursor-pointer w-full"}/>
+            <BsChevronCompactUp onClick={props.topics ? ()=>{setExpand(!expand)}: null } className={(expand ? "" : "hidden") +  " m-auto cursor-pointer w-full"}/>
         </div>
     )
 }
 
-export default SkillCard;
+export default SkillCard;       
