@@ -56,4 +56,4 @@ const SkillCard = (props)  => {
     )
 }
 
-export default SkillCard;       
+export default SkillCard;

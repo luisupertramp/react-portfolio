@@ -45,7 +45,7 @@ function App() {
           <link rel="icon" href="/favicon.ico" />
         </head>
 
-        <main className=' bg-white px-10 text-black md:px-20 dark:bg-zinc-900 dark:text-white'>
+        <main className=' bg-white px-10 text-black md:px-20 dark:bg-gradient-to-tr dark:from-zinc-900 dark:from-20% dark:via-slate-800 dark:via-80% dark:to-gray-900 dark:bg-zinc-900 dark:to-90% dark:text-white'>
 
           {/* Main page */}
           <section className=' min-h-screen pb-24'>
@@ -54,11 +54,11 @@ function App() {
               <h1 className=' text-xl font-burtons'>My resume</h1>
               <ul className='flex items-center'>
                 <li><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/></li>
-                {/*
-                <li><a className=' bg-cyan-500 shadow-lg dark:bg-green-600  text-white px-4 py-2 rounded ml-8 dark:shadow-green-500/30 dark:hover:shadow-green-500/40' href="#">
+                
+                <li><a className=' bg-cyan-500 shadow-lg dark:bg-green-600  text-white px-4 py-2 rounded ml-8 dark:shadow-green-500/30 dark:hover:shadow-green-500/40' href="Luis_Pedroza_Resume_v2.pdf" download>
                   PDF version
                 </a></li>
-                */}
+                
               </ul>
             </nav>
 
@@ -174,6 +174,8 @@ function App() {
               <ExperienceCard 
                 image={support}
                 pos="Support Engineer"
+                company="Softtek"
+                date="February 2017 - August 2019"
                 desc={"Level 2 support engineer with Windows Server environments.\nWorking with GE engineers from around the world, I developed skills in efficient international communication, customer-oriented service, and teamwork across disciplines."}
                 action="Tools I used"
                 items={["Ticketing system management","Monitoring with Solar Winds","Windows Server administration","Basic Fortinet and Cisco configuration"]}
@@ -183,6 +185,8 @@ function App() {
               <ExperienceCard 
                 image={ba}
                 pos="Business Analyst"
+                company="Benchmark ESG (Before, Gensuite)"
+                date="August 2019 - November 2020"
                 desc={"Working in the EHS sector as a business analyst, I gained experience in understanding our customers' needs by gathering information for customization projects, testing features in deployment sessions, and creating proper documentation, among other duties."}
                 action="Daily Activites"
                 items={["Gathering requirements","Testing implementations","Validaton of bugs and errors","SQL queries for custom reports"]}
@@ -192,7 +196,9 @@ function App() {
               <ExperienceCard 
                 image={dev}
                 pos="Web Developer"
-                desc={" As a front-end developer, I have experience working with various technologies such as Adobe ColdFusion, SQL Server, jQuery, Bootstrap, and Agile methodologies like Scrum."}
+                company="Benchmark ESG, then KIUBIX"
+                date="November 2020 - December 2022"
+                desc={" As a front-end developer in Benchmark ESG, I acquired experience working with technologies such as Adobe ColdFusion, SQL Server, jQuery, and Bootstrap. Then I moved to Kiubix where I worked with technologies like React, Material UI, Sass and Agile methodologies like Scrum."}
                 action="Technologies I used"
                 items={["React","Material UI","Sass (Styling sheets)","Git","Figma"]}
               />
