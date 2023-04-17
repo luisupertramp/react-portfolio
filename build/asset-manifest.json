@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d1b6e5e.css",
-    "main.js": "/static/js/main.f2afd91c.js",
+    "main.css": "/static/css/main.24fc16b1.css",
+    "main.js": "/static/js/main.fcd8d9f2.js",
     "static/js/787.a2cb61a6.chunk.js": "/static/js/787.a2cb61a6.chunk.js",
     "static/media/Cloud_Practicioner_Essentials.png": "/static/media/Cloud_Practicioner_Essentials.a1f4df251d13b029f110.png",
     "static/media/Well-Architected-Framework.png": "/static/media/Well-Architected-Framework.655599b2dfcb43fb5061.png",
@@ -14,12 +14,12 @@
     "static/media/dev.png": "/static/media/dev.c24d41c8d9a1a208c646.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.0d1b6e5e.css.map": "/static/css/main.0d1b6e5e.css.map",
-    "main.f2afd91c.js.map": "/static/js/main.f2afd91c.js.map",
+    "main.24fc16b1.css.map": "/static/css/main.24fc16b1.css.map",
+    "main.fcd8d9f2.js.map": "/static/js/main.fcd8d9f2.js.map",
     "787.a2cb61a6.chunk.js.map": "/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d1b6e5e.css",
-    "static/js/main.f2afd91c.js"
+    "static/css/main.24fc16b1.css",
+    "static/js/main.fcd8d9f2.js"
   ]
 }
