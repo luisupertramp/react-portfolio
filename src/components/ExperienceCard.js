@@ -30,7 +30,7 @@ const ExperienceCard = (props) => {
 
             <h4 className="py-4 text-cyan-600 dark:text-green-500 dark:font-semibold">{props.action}</h4>
 
-            <ul>
+            <ul role="list" className='my-3 list-disc marker:text-sky-400 dark:marker:text-green-500 px-1 list-inside '>
                 {props.items.map((activityName) => {
                     return <li key={"card_"+activityName} className="text-gray-800 font-light dark:text-zinc-200 py-1">{activityName}</li>
                 })}

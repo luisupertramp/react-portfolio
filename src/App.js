@@ -9,7 +9,6 @@ import ExperienceCard from './components/ExperienceCard';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
 import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import {BiAtom} from  'react-icons/bi';
-import {FaReact} from 'react-icons/di';
 import {HiOutlineDesktopComputer} from 'react-icons/hi';
 import {HiOutlineRocketLaunch} from 'react-icons/hi2';
 import {TbFileCertificate} from 'react-icons/tb';
@@ -20,9 +19,10 @@ import ba from "./media/ba.png";
 import dev from "./media/dev.png";
 
 // Certs
-import pythonCourse from "./media/Python.png"
-import awsCourse from "./media/Cloud_Practicioner_Essentials.png"
-import awsWellArch from "./media/Well-Architected-Framework.png"
+import pythonCourse from "./media/certs/Python.png"
+import awsCourse from "./media/certs/Cloud_Practicioner_Essentials.png"
+import awsWellArch from "./media/certs/Well-Architected-Framework.png"
+import linuxSysAdm from "./media/certs/Linux_sys_admin.png"
 
 // Images
 import memoji from './media/memoji_me.png';
@@ -68,10 +68,10 @@ function App() {
               <h3 className='text-2xl py-2 md:text-3xl'>Software engineer</h3>
               <div className='lg:py-10'>
                 <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
-                  Hi there, I am a software engineer passionate about technology. I enjoy learning new things all the time.
+                  Hello! I am a software engineer passionate about technology. I enjoy learning new things all the time.
                 </p>
                 <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
-                  I am currently in the process of learning everything it takes to become a DevOps Engineer, so if my current skills fit the requirements of a position you may know, or if you have any other inquiry, please contact me at <a href="mailto:luisfpedrozaa@gmail.com" className='underline text-cyan-600 dark:text-green-500'>luisfpedrozaa@gmail.com</a> or or DM me via LinkedIn for a quicker response.
+                  I am currently in the process of learning everything it takes to become a DevOps Engineer, so if my current skills fit the requirements of a position you may know, or if you have any other inquiry, please contact me at <a href="mailto:luisfpedrozaa@gmail.com" className='underline text-cyan-600 dark:text-green-500'>luisfpedrozaa@gmail.com</a> or DM me via LinkedIn for a quicker response.
                 </p>
               </div>
             </div>
@@ -96,6 +96,23 @@ function App() {
                 For me, an easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
               </p>
               <div className='lg:flex lg:gap-0.5 lg:flex-wrap lg:justify-center mt-6'>
+                
+                <div className='flex lg:w-96 justify-around'>
+                  <SkillCard 
+                    name="Linux" 
+                    exp={3} 
+                    know={4} 
+                    topics={["Solid console handling", "File system", "VIM editor", "User accounts and groups management" , "File permissions" , "Networking", "SSH configuration" , "Task automation (crontab and anacron)" , "Basic bash shell scripting", "Task automation with Ansible" ]}
+                    shadow={true}
+                  />
+                  <SkillCard 
+                    name="Python" 
+                    exp={3} 
+                    know={4} 
+                    topics={["Dictionaries","Algorithms","Lists","Objects"]}
+                  />
+                </div>
+
                 <div className='flex lg:w-96 justify-around'>
                   <SkillCard 
                     name="React" 
@@ -120,22 +137,6 @@ function App() {
                     name="SQL Server" 
                     exp={3} 
                     know={4} 
-                  />
-                </div>
-
-                <div className='flex lg:w-96 justify-around'>
-                  <SkillCard 
-                    name="Linux" 
-                    exp={3} 
-                    know={4} 
-                    topics={["Solid console handling", "File system", "VIM editor", "User accounts and groups management" , "File permissions" , "Networking", "SSH configuration" , "Task automation (crontab and anacron)" , "Basic bash shell scripting" ]}
-                    shadow={true}
-                  />
-                  <SkillCard 
-                    name="Python" 
-                    exp={3} 
-                    know={4} 
-                    topics={["Dictionaries","Algorithms","Lists","Objects"]}
                   />
                 </div>
 
@@ -213,10 +214,10 @@ function App() {
               <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
               <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
-                I enjoy listening to audiobooks, photography, hiking and spending some time in nature.
+                I enjoy photography, listening to audiobooks, hiking and spending some time in nature.
               </p>
               <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
-              I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
+                I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
               </p>
             </div>
 
@@ -234,13 +235,16 @@ function App() {
 
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
               <div className='basis-1/3 flex-1'>
-                <img width={'100%'} height={'100%'} src={awsCourse}/>
+                <img className=' w-full' src={linuxSysAdm}/>
               </div>
               <div className='basis-1/3 flex-1'>
-                <img width={'100%'} height={'100%'} src={awsWellArch}/>
+                <img className=' w-full' src={pythonCourse}/>
               </div>
               <div className='basis-1/3 flex-1'>
-                <img className=' w-full lg:w-1/2' src={pythonCourse}/>
+                <img className=' w-full' src={awsCourse}/>
+              </div>
+              <div className='basis-1/3 flex-1'>
+                <img className=' w-full' src={awsWellArch}/>
               </div>
             </div>
           </section>

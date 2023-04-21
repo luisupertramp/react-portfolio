@@ -24,7 +24,7 @@ const SkillCard = (props)  => {
     const [expand, setExpand] = useState(false)
 
     return (
-        <div className="p-3 my-2 mx-2 h-min w-1/2 text-center shadow-lg rounded border dark:hover:border-green-600 hover:border-2 hover:border-cyan-500  transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
+        <div className="px-1 py-4 my-2 mx-2 h-min w-1/2 text-center shadow-lg rounded border dark:hover:border-green-600 hover:border-2 hover:border-cyan-500  transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
             <div className="mb-3"><b>{props.name}</b></div>
             <div className='mb-3 flex justify-center flex-col'>
                 <div className=" my-1"> 
@@ -41,7 +41,7 @@ const SkillCard = (props)  => {
                 <>
                     <div className={(expand ? null : "hidden") + " mt-7"}>
                         <p className='text-teal-500 dark:text-green-500'>I feel good at:</p>
-                        <ul role="list" className='my-3 list-disc marker:text-sky-400 dark:marker:text-green-500 px-7 '>
+                        <ul role="list" className='my-3 list-disc marker:text-sky-400 dark:marker:text-green-500 pl-4 pr-2 list-inside text-start'>
                             {props.topics.map((top)=>{
                                 return <li key={top} className='text-sm'>{top}</li>
                             })}
