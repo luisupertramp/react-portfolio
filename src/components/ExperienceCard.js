@@ -20,7 +20,7 @@ const ExperienceCard = (props) => {
                 {props.pos}
             </h3>
 
-            <h3 className=" text-sm  dark:text-green-600 pb-5  ">
+            <h3 className=" text-sm text-cyan-600 dark:text-green-600 pb-5">
                 {props.date}
             </h3>
 
@@ -28,7 +28,9 @@ const ExperienceCard = (props) => {
                 {props.desc}
             </p>
 
-            <h4 className="py-4 text-cyan-600 dark:text-green-500 dark:font-semibold">{props.action}</h4>
+            <h4 className="py-4 text-cyan-600 dark:text-green-500 dark:font-semibold">
+                {props.action}
+            </h4>
 
             <ul role="list" className='my-3 list-disc marker:text-sky-400 dark:marker:text-green-500 px-1 list-inside '>
                 {props.items.map((activityName) => {

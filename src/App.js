@@ -4,6 +4,7 @@ import './App.css';
 // Components
 import SkillCard from './components/SkillCard';
 import ExperienceCard from './components/ExperienceCard';
+import Courses from './components/Courses';
 
 // Icons
 import {BsFillMoonStarsFill} from 'react-icons/bs';
@@ -155,8 +156,8 @@ function App() {
               </div>
           </section>
           
+          {/* Professional experience */}
           <section className='pb-24'>
-            {/* Professional experience */}
             <div>
               <h3 className='text-3xl py-5'>Professional experience</h3>
               <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
@@ -233,19 +234,37 @@ function App() {
               </p>
             </div>
 
+            {/* Course component */}
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-              <div className='basis-1/3 flex-1'>
-                <img className=' w-full' src={linuxSysAdm}/>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <img className=' w-full' src={pythonCourse}/>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <img className=' w-full' src={awsCourse}/>
-              </div>
-              <div className='basis-1/3 flex-1'>
-                <img className=' w-full' src={awsWellArch}/>
-              </div>
+
+              <Courses 
+                title = "Learn Linux and Become SysAdmin"
+                cert = {linuxSysAdm}
+                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
+                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+              />
+
+              <Courses 
+                title = "Scientific computing with Python"
+                cert = {pythonCourse}
+                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
+                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+              />
+
+              <Courses 
+                title = "AWS Cloud Practitioner Essentials Course"
+                cert = {awsCourse}
+                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
+                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+              />
+
+              <Courses 
+                title = "AWS Well-Architected Course"
+                cert = {awsWellArch}
+                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
+                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+              />
+             
             </div>
           </section>
 
