@@ -27,7 +27,8 @@ import linuxSysAdm from "./media/certs/Linux_sys_admin.png"
 
 // Images
 import memoji from './media/memoji_me.png';
-import gitHub from "./media/github.png"
+import gitHub from "./media/github.png";
+import aboutMe from "./media/about_me.jpg";
 
 import { useState } from 'react';
 
@@ -64,9 +65,9 @@ function App() {
             </nav>
 
             {/* Personal info */}
-            <div className=' text-center p-8 lg:px-80'>
+            <div className=' text-center p-8 lg:px-72'>
               <h2 className=' text-5xl lg:py-7 py-2 text-cyan-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
-              <h3 className='text-2xl py-2 md:text-3xl'>Software engineer</h3>
+              <h3 className='text-2xl py-2 md:text-3xl'>Software engineer | Aspiring DevOps / Cloud Engineer</h3>
               <div className='lg:py-10'>
                 <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
                   Hello! I am a software engineer passionate about technology. I enjoy learning new things all the time.
@@ -90,10 +91,10 @@ function App() {
           </section>
 
           {/* Skills */}
-          <section className='pb-24' >
+          <section className='pb-24 lg:px-72' >
               <h3 className='text-3xl py-5'>Skills</h3>
               <div className='flex justify-center'><BiAtom className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' mx-auto text-md md:text-xl pt-5 lg:px-16 leading-8 text-gray-800  dark:text-zinc-200  '>
+              <p className=' mx-auto text-md md:text-xl pt-5 leading-8 text-gray-800  dark:text-zinc-200  '>
                 For me, an easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
               </p>
               <div className='lg:flex lg:gap-0.5 lg:flex-wrap lg:justify-center mt-6'>
@@ -161,11 +162,8 @@ function App() {
             <div>
               <h3 className='text-3xl py-5'>Professional experience</h3>
               <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800  dark:text-zinc-200'>
+              <p className=' text-md md:text-xl lg:px-72 py-5 leading-8 text-gray-800  dark:text-zinc-200'>
                 Since 2017, I've been working mainly in 3 areas: <b>Support Engineer</b>, <b>Business Analayst</b> and <b>Web developer.</b> <br/>
-                {/*
-                <span className=' text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>{'('}For more information about dates and companies, feel free to download my PDF resume, from the button at the top of this page{')'}</span>
-                */}
               </p>
             </div>
 
@@ -210,18 +208,22 @@ function App() {
 
           {/* About me */}
           <section className='pb-24'>
-            <div className='lg:px-16'>
+            <div className='lg:px-72'>
               <h3 className='text-3xl py-5 '>About me</h3>
               <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
-                I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
-                I enjoy photography, listening to audiobooks, hiking and spending some time in nature.
-              </p>
-              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
-                I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
-              </p>
+              <div className='lg:flex lg:gap-10'>
+                <div className='lg:text-start'>
+                  <p className='text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+                    I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
+                    I enjoy photography, listening to audiobooks, hiking and spending some time in nature.
+                  </p>
+                  <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+                    I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
+                  </p>
+                </div>
+                <img className='mx-auto mt-10 lg:w-3/6' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
+              </div>
             </div>
-
           </section>
 
           {/* Courses */}
@@ -229,14 +231,15 @@ function App() {
             <div>
               <h3 className='text-3xl py-7 '>Courses and Certifications</h3>
               <div className='flex justify-center'><TbFileCertificate className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+              <p className=' text-md md:text-xl lg:px-72 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I am very glad <b>(and proud of myself)</b> to show some of the courses that I've been taking in the last few months, here is a brief summary:
               </p>
             </div>
 
             {/* Course component */}
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-
+              
+              {/* Linux */}
               <Courses 
                 title = "Learn Linux and Become SysAdmin"
                 cert = {linuxSysAdm}
@@ -244,35 +247,42 @@ function App() {
                 topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
               />
 
+              {/* Python */}
               <Courses 
                 title = "Scientific computing with Python"
                 cert = {pythonCourse}
-                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
-                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+                desc = "In this course, I learned Python fundamentals like variables, loops, conditionals, and functions. Then it all quickly ramp up to complex data structures, networking, relational databases, and data visualization. It was a great course for people like me that had previous experience with other programming languages, but needed to get familiar with the Python sintax."
+                topics = {["Variables, Expressions, and Statements","Python Functions","Loops and Iterations","Reading Files","Dictionaries","Working with touples","Networking with Python","Web Scraping with Python","Python Objects","Visualizing Data with Python"]}
+                certLink = "https://www.freecodecamp.org/certification/fcc0befd61f-f50d-42ff-8254-f28f4a0a454d/scientific-computing-with-python-v7"
               />
 
+              {/* AWS Cloud Practitioner */}
               <Courses 
                 title = "AWS Cloud Practitioner Essentials Course"
                 cert = {awsCourse}
-                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
-                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+                desc = "This course contains a general understanding of the AWS Cloud, regardless of your specific technical role. It provides a detailed overview of cloud concepts and AWS services, security, architecture, pricing, and support. The course also helps you prepare for the AWS Certified Cloud Practitioner exam."
+                topics = {["AWS cloud: basic general infrastructure","Key services of the AWS platform","Basic architectural principles","Basic security and compliance aspects of the AW","Billing, account management and pricing models","Documentation or technical assistance","AWS Cloud Value Proposition","basic/core features of performing deployments and tasks in the AWS Cloud"]}
               />
 
+              {/* AWS Well-Architected */}
               <Courses 
                 title = "AWS Well-Architected Course"
                 cert = {awsWellArch}
-                desc = "This extensive, top-rated course consists of over 20 hours of content and more than 200 lessons. It is expertly designed to teach you how Linux works and guide you, step by step, towards becoming a Linux System Administrator."
-                topics = {["File System","Account Management","File Permission","Process Management","Networking","System Administration","Bash Shell Scripting","Intro to Docker","Linux Security","Task automation with Ansible, crontab and anacron"]}
+                desc = "This course is designed to provide a deep dive into the AWS Well-Architected Framework and its five pillars. It is divided into eight modules, which include overviews of the AWS Well-Architected Framework, as well as the Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization pillars."
+                topics = {["Pillars, features, and common uses of the Well-Architected Framework.", "design principles, key services, and best practices for each pillar", "How to use the Well-Architected Framework and the AWS Well-Architected Tool to review your architecture."]}
               />
-             
+
+              <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>DISCLAIMER: AWS Certificates of Completion are not from the official Certificate Exams (yet) but still, from preparation courses of the AWS Skill Builder web site. </span>
+              
             </div>
           </section>
 
-          <section className='pb-24'>
+          {/* GitHub */}
+          <section className='pb-24 lg:px-72'>
             <div>
             <h3 className='text-3xl py-5 '>Checkout my GitHub!</h3>
             <div className='flex justify-center'><FiGithub className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl py-5 lg:px-16 leading-8 text-gray-800 dark:text-zinc-200'>
+              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I'm always learning new things. Here you will find some projects like this exact website that I created using React and Tailwind, and deployed using nginx in a docker container running on a Ubuntu server. Also there are some HackerRank code challenges (in python) and Linux challenges.
               </p>
             </div>
