@@ -9,7 +9,7 @@ const Courses = (props) => {
     return (
         <div className="lg:flex lg:gap-10">
             {/* Certificate details */}
-            <div className="lg:basis-1/2 text-start align-middle lg:my-auto">
+            <div className=" lg:max-w-7xl lg:basis-1/2 text-start align-middle lg:my-auto lg:mx-auto">
 
                 {/* Title */}
                 <h3 className=' text-2xl text-cyan-500 dark:text-green-500'>
@@ -18,7 +18,7 @@ const Courses = (props) => {
                 
                 {/* Description */}
                 
-                <p className=" text-md md:text-xl py-2 font-light text-gray-800 dark:text-zinc-200">
+                <p className="text-md md:text-xl py-2 font-light text-gray-800 dark:text-zinc-200">
                     {props.desc}
                 </p>
 

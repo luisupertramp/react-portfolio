@@ -211,8 +211,8 @@ function App() {
             <div className='lg:px-64'>
               <h3 className='text-3xl py-5 '>About me</h3>
               <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <div className='lg:flex lg:gap-8 lg:mt-10'>
-                <div className='lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
+              <div className='lg:justify-center lg:flex lg:gap-8 lg:mt-10'>
+                <div className='lg:max-w-7xl lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
                   <div>
                     <p className='text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
                       I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
@@ -222,10 +222,10 @@ function App() {
                       I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
                     </p>
                   </div>
-                  <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>View from the Toronto Islands. Behind me, the iconic skyline with the CN Tower</span>
+                  <div className='mx-auto mb-10 text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>View from the Toronto Islands. Behind me, the iconic skyline with the CN Tower</div>
                 </div>
-                <div className='lg:basis-1/2'>
-                  <img className='mx-auto ' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
+                <div className='lg:basis-1/2 lg:flex-1 lg:align-middle lg:my-auto'>
+                  <img className='mx-auto' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
                 </div>
               </div>
             </div>
@@ -242,7 +242,7 @@ function App() {
             </div>
 
             {/* Course component */}
-            <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
+            <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap lg:justify-center'>
               
               {/* Linux */}
               <Courses 
