@@ -65,7 +65,7 @@ function App() {
             </nav>
 
             {/* Personal info */}
-            <div className=' text-center p-8 lg:px-72'>
+            <div className=' text-center p-8 lg:px-64'>
               <h2 className=' text-5xl lg:py-7 py-2 text-cyan-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
               <h3 className='text-2xl py-2 md:text-3xl'>Software engineer | Aspiring DevOps / Cloud Engineer</h3>
               <div className='lg:py-10'>
@@ -91,7 +91,7 @@ function App() {
           </section>
 
           {/* Skills */}
-          <section className='pb-24 lg:px-72' >
+          <section className='pb-24 lg:px-64' >
               <h3 className='text-3xl py-5'>Skills</h3>
               <div className='flex justify-center'><BiAtom className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
               <p className=' mx-auto text-md md:text-xl pt-5 leading-8 text-gray-800  dark:text-zinc-200  '>
@@ -162,7 +162,7 @@ function App() {
             <div>
               <h3 className='text-3xl py-5'>Professional experience</h3>
               <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl lg:px-72 py-5 leading-8 text-gray-800  dark:text-zinc-200'>
+              <p className=' text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800  dark:text-zinc-200'>
                 Since 2017, I've been working mainly in 3 areas: <b>Support Engineer</b>, <b>Business Analayst</b> and <b>Web developer.</b> <br/>
               </p>
             </div>
@@ -208,11 +208,11 @@ function App() {
 
           {/* About me */}
           <section className='pb-24'>
-            <div className='lg:px-72'>
+            <div className='lg:px-64'>
               <h3 className='text-3xl py-5 '>About me</h3>
               <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <div className='lg:flex lg:gap-10'>
-                <div className='lg:text-start lg:flex lg:flex-col lg:justify-between'>
+              <div className='lg:flex lg:gap-8 lg:mt-10'>
+                <div className='lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
                   <div>
                     <p className='text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
                       I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
@@ -224,7 +224,9 @@ function App() {
                   </div>
                   <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>View from the Toronto Islands. Behind me, the iconic skyline with the CN Tower</span>
                 </div>
-                <img className='mx-auto mt-10 lg:w-3/6' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
+                <div className='lg:basis-1/2'>
+                  <img className='mx-auto ' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
+                </div>
               </div>
             </div>
           </section>
@@ -234,7 +236,7 @@ function App() {
             <div>
               <h3 className='text-3xl py-7 '>Courses and Certifications</h3>
               <div className='flex justify-center'><TbFileCertificate className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl lg:px-72 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+              <p className=' text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I am very glad <b>(and proud of myself)</b> to show some of the courses that I've been taking in the last few months, here is a brief summary:
               </p>
             </div>
@@ -281,7 +283,7 @@ function App() {
           </section>
 
           {/* GitHub */}
-          <section className='pb-24 lg:px-72'>
+          <section className='pb-24 lg:px-64'>
             <div>
             <h3 className='text-3xl py-5 '>Checkout my GitHub!</h3>
             <div className='flex justify-center'><FiGithub className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
