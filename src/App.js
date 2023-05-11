@@ -65,16 +65,17 @@ function App() {
             </nav>
 
             {/* Personal info */}
-            <div className=' text-center p-8 lg:px-64'>
-              <h2 className=' text-5xl lg:py-7 py-2 text-cyan-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
-              <h3 className='text-2xl py-2 md:text-3xl'>Software engineer | Aspiring DevOps / Cloud Engineer</h3>
+            <div className=' text-left p-8 lg:px-64'>
+              <h2 className=' text-5xl py-2 text-cyan-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
+              <h3 className='text-2xl md:text-3xl'>Software engineer | Aspiring DevOps / Cloud Engineer</h3>
               <div className='lg:py-10'>
                 <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
-                  Hello! I am a software engineer passionate about technology. I enjoy learning new things all the time.
+                  Hello! I am a software engineer passionate about technology. I enjoy learning new things constantly.
                 </p>
                 <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
-                  I am currently in the process of learning everything it takes to become a DevOps Engineer, so if my current skills fit the requirements of a position you may know, or if you have any other inquiry, please contact me at <a href="mailto:luisfpedrozaa@gmail.com" className='underline text-cyan-600 dark:text-green-500'>luisfpedrozaa@gmail.com</a> or DM me via LinkedIn for a quicker response.
+                  I am preparing myself to become a DevOps Engineer, so if my current skills fit the requirements of a position you may know, or if you have any other inquiry, please contact me at <a href="mailto:luisfpedrozaa@gmail.com" className='underline text-cyan-600 dark:text-green-500'>luisfpedrozaa@gmail.com</a> or DM me via LinkedIn for a quicker response.
                 </p>
+                
               </div>
             </div>
 
@@ -89,13 +90,72 @@ function App() {
               <a href="https://github.com/luisupertramp" target={'_blank'}><AiFillGithub className='transition transform hover:scale-150'/></a>
             </div>
           </section>
+          
+          {/* Professional experience */}
+          <section className='pb-24'>
+            <div className='lg:px-64 py-5'>
+              <h3 className='text-3xl py-5'>Professional experience</h3>
+              <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
+              <div className='text-left'>
+                <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl'>
+                  {/* Since 2017, I've been working mainly in 3 areas: <b>Support Engineer</b>, <b>Business Analayst</b> and <b>Web developer.</b> <br/> */}
+                  I have 2+ yoE working as a web developer with tools such as React, Bootstrap, MaterialUI, Tailwind, JS, jQuery, and others.
+                  <br/><br/>
+                  Before that I had the opportunity to work as a Business Analyst for over a year, working directly with customers (mostly in the US) regarding issues they had with an internal ESG application, gathering requirements for customizations projects, testing in deployments and so on.
+                  <br/><br/>
+                  I have 2+ yoE as support engineer working with Windows servers and networking devices such as Cisco and Fortinet firewalls.
+                </p>
+                <p className=' mx-auto text-md pt-5 leading-8 text-gray-800  dark:text-zinc-200 md:text-xl '>
+                  Right know I am getting prepared to work in the DevOps/Cloud areas. Have a look at my <a href='#courses_section' className='underline text-cyan-600 dark:text-green-500'>Courses and Certifications section</a> where you can go through my preparation process and see the courses I've taken. 
+                </p>
+              </div>
+            </div>
+
+            {/* Cards */}
+            <div className="lg:flex gap-10 lg:px-10">
+
+              {/* Support Engineer */}
+              <ExperienceCard 
+                image={support}
+                pos="Support Engineer"
+                company="Softtek"
+                date="February 2017 - August 2019"
+                desc={"Level 2 support engineer with Windows Server environments.\nWorking with GE engineers from around the world, I developed skills in efficient international communication, customer-oriented service, and teamwork across disciplines."}
+                action="Tools I used"
+                items={["Ticketing system management","Monitoring with Solar Winds","Windows Server administration","Basic Fortinet and Cisco configuration"]}
+              />
+
+              {/* Business Analyst */}
+              <ExperienceCard 
+                image={ba}
+                pos="Business Analyst"
+                company="Benchmark ESG (Before, Gensuite)"
+                date="August 2019 - November 2020"
+                desc={"Working in the EHS sector as a business analyst, I gained experience in understanding our customers' needs by gathering information for customization projects, testing features in deployment sessions, and creating proper documentation, among other duties."}
+                action="Daily Activites"
+                items={["Gathering requirements","Testing implementations","Validaton of bugs and errors","SQL queries for custom reports"]}
+              />
+
+              {/* Front-end Developer */}
+              <ExperienceCard 
+                image={dev}
+                pos="Web Developer"
+                company="Benchmark ESG, then KIUBIX"
+                date="November 2020 - December 2022"
+                desc={" As a front-end developer in Benchmark ESG, I acquired experience working with technologies such as Adobe ColdFusion, SQL Server, jQuery, and Bootstrap. Then I moved to Kiubix where I worked with technologies like React, Material UI, Sass and Agile methodologies like Scrum."}
+                action="Technologies I used"
+                items={["React","Material UI","Sass (Styling sheets)","Git","Figma"]}
+              />
+              
+            </div>
+          </section>
 
           {/* Skills */}
           <section className='pb-24 lg:px-64' >
               <h3 className='text-3xl py-5'>Skills</h3>
               <div className='flex justify-center'><BiAtom className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' mx-auto text-md md:text-xl pt-5 leading-8 text-gray-800  dark:text-zinc-200  '>
-                For me, an easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
+              <p className=' text-left mx-auto text-md md:text-xl pt-5 leading-8 text-gray-800  dark:text-zinc-200  '>
+                An easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
               </p>
               <div className='lg:flex lg:gap-0.5 lg:flex-wrap lg:justify-center mt-6'>
                 
@@ -150,89 +210,16 @@ function App() {
                   />
                   <SkillCard 
                     name="AWS" 
-                    exp={0} 
-                    know={2} 
+                    exp={2} 
+                    know={3}
+                    topics={["Creating, managing and accessing EC2 instances", "Creating an Amazon Load Balancer" , "Creating Security Groups and rules" , "Creating Auto-Scaling Groups", "Creating S3 Buckets", "Hosting web sites using S3" , "Creating EBS volumes and snapshots" , "Creating VPCs", "Creating Endpoints", "Creating Flow Logs" , "Creating a CloudFront CDNs " , "Creating a RDS connection with MySQL Workbench as engine", "Creating Dynamo tables using console"]}                  
                   />
                 </div>
               </div>
           </section>
-          
-          {/* Professional experience */}
-          <section className='pb-24'>
-            <div>
-              <h3 className='text-3xl py-5'>Professional experience</h3>
-              <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800  dark:text-zinc-200'>
-                Since 2017, I've been working mainly in 3 areas: <b>Support Engineer</b>, <b>Business Analayst</b> and <b>Web developer.</b> <br/>
-              </p>
-            </div>
-
-            {/* Cards */}
-            <div className="lg:flex gap-10">
-
-              {/* Support Engineer */}
-              <ExperienceCard 
-                image={support}
-                pos="Support Engineer"
-                company="Softtek"
-                date="February 2017 - August 2019"
-                desc={"Level 2 support engineer with Windows Server environments.\nWorking with GE engineers from around the world, I developed skills in efficient international communication, customer-oriented service, and teamwork across disciplines."}
-                action="Tools I used"
-                items={["Ticketing system management","Monitoring with Solar Winds","Windows Server administration","Basic Fortinet and Cisco configuration"]}
-              />
-
-              {/* Business Analyst */}
-              <ExperienceCard 
-                image={ba}
-                pos="Business Analyst"
-                company="Benchmark ESG (Before, Gensuite)"
-                date="August 2019 - November 2020"
-                desc={"Working in the EHS sector as a business analyst, I gained experience in understanding our customers' needs by gathering information for customization projects, testing features in deployment sessions, and creating proper documentation, among other duties."}
-                action="Daily Activites"
-                items={["Gathering requirements","Testing implementations","Validaton of bugs and errors","SQL queries for custom reports"]}
-              />
-
-              {/* Front-end Developer */}
-              <ExperienceCard 
-                image={dev}
-                pos="Web Developer"
-                company="Benchmark ESG, then KIUBIX"
-                date="November 2020 - December 2022"
-                desc={" As a front-end developer in Benchmark ESG, I acquired experience working with technologies such as Adobe ColdFusion, SQL Server, jQuery, and Bootstrap. Then I moved to Kiubix where I worked with technologies like React, Material UI, Sass and Agile methodologies like Scrum."}
-                action="Technologies I used"
-                items={["React","Material UI","Sass (Styling sheets)","Git","Figma"]}
-              />
-              
-            </div>
-          </section>
-
-          {/* About me */}
-          <section className='pb-24'>
-            <div className='lg:px-64'>
-              <h3 className='text-3xl py-5 '>About me</h3>
-              <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <div className='lg:justify-center lg:flex lg:gap-8 lg:mt-10'>
-                <div className='lg:max-w-7xl lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
-                  <div>
-                    <p className='text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
-                      I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
-                      I enjoy photography, listening to audiobooks, hiking and spending some time in nature.
-                    </p>
-                    <p className=' text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
-                      I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
-                    </p>
-                  </div>
-                  <div className='mx-auto mb-10 text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>View from the Toronto Islands. Behind me, the iconic skyline with the CN Tower</div>
-                </div>
-                <div className='lg:basis-1/2 lg:flex-1 lg:align-middle lg:my-auto'>
-                  <img className='mx-auto' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* Courses */}
-          <section className='pb-24'>
+          <section id="courses_section" className='pb-24'>
             <div>
               <h3 className='text-3xl py-7 '>Courses and Certifications</h3>
               <div className='flex justify-center'><TbFileCertificate className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
@@ -279,6 +266,31 @@ function App() {
 
               <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>DISCLAIMER: AWS Certificates of Completion are not from the official Certificate Exams (yet) but still, from preparation courses of the AWS Skill Builder web site. </span>
               
+            </div>
+          </section>
+
+          {/* About me */}
+          <section className='pb-24'>
+            <div className='lg:px-64'>
+              <h3 className='text-3xl py-5 '>About me</h3>
+              <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
+              <div className='lg:justify-center lg:flex lg:gap-8 lg:mt-10'>
+                <div className='lg:max-w-7xl lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
+                  <div>
+                    <p className='text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
+                      I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
+                      I enjoy photography, listening to audiobooks, hiking and spending some time in nature.
+                    </p>
+                    <p className=' text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
+                      I recently took a professional break and traveled to experience a Canadian winter. During this time, I devoted myself to studying the foundations of DevOps. I am truly excited to be part of a company again, being around a group of people that shares similar interests as I do, and above all, contribute to the society through my work. I'm more than ready.
+                    </p>
+                  </div>
+                  <div className='mx-auto mb-10 text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>View from the Toronto Islands. Behind me, the iconic skyline with the CN Tower</div>
+                </div>
+                <div className='lg:basis-1/2 lg:flex-1 lg:align-middle lg:my-auto'>
+                  <img className='mx-auto' src={aboutMe} alt="A picture of myself with the CN tower behind, in Toronto, Canada."/>
+                </div>
+              </div>
             </div>
           </section>
 
