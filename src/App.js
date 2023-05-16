@@ -47,7 +47,7 @@ function App() {
           <link rel="icon" href="/favicon.ico" />
         </head>
 
-        <main className=' bg-white px-10 text-black md:px-20 dark:bg-gradient-to-tr dark:from-zinc-900 dark:from-20% dark:via-slate-800 dark:via-80% dark:to-gray-900 dark:bg-zinc-900 dark:to-90% dark:text-white'>
+        <main className='bg-white px-10 md:px-20 text-black dark:text-white dark:bg-gradient-to-tr dark:from-slate-900 dark:from-30% dark:via-slate-800 dark:via-70% dark:to-slate-900 dark:to-100% '>
 
           {/* Main page */}
           <section className=' min-h-screen pb-24'>
@@ -112,7 +112,7 @@ function App() {
             </div>
 
             {/* Cards */}
-            <div className="lg:flex gap-10 lg:px-10">
+            <div className="lg:flex gap-10 lg:px-24">
 
               {/* Support Engineer */}
               <ExperienceCard 
@@ -142,9 +142,9 @@ function App() {
                 pos="Web Developer"
                 company="Benchmark ESG, then KIUBIX"
                 date="November 2020 - December 2022"
-                desc={" As a front-end developer in Benchmark ESG, I acquired experience working with technologies such as Adobe ColdFusion, SQL Server, jQuery, and Bootstrap. Then I moved to Kiubix where I worked with technologies like React, Material UI, Sass and Agile methodologies like Scrum."}
+                desc={" As a front-end developer in Benchmark ESG, I acquired experience working with technologies such as Adobe ColdFusion, SQL Server, jQuery, and Bootstrap. Then I moved to Kiubix where I worked with React, Material UI, Sass and Scrum methodology."}
                 action="Technologies I used"
-                items={["React","Material UI","Sass (Styling sheets)","Git","Figma"]}
+                items={["React","Material UI","Sass (Styling sheets)","Git & Figma"]}
               />
               
             </div>
@@ -179,7 +179,7 @@ function App() {
                   <SkillCard 
                     name="React" 
                     exp={3} 
-                    know={2} 
+                    know={3} 
                     topics={["Components segmentation","useState", "useEffect" , "useContext"]}
                   />
                   <SkillCard 
@@ -206,7 +206,7 @@ function App() {
                   <SkillCard 
                     name="Git" 
                     exp={3} 
-                    know={2} 
+                    know={3} 
                   />
                   <SkillCard 
                     name="AWS" 
@@ -223,7 +223,7 @@ function App() {
             <div>
               <h3 className='text-3xl py-7 '>Courses and Certifications</h3>
               <div className='flex justify-center'><TbFileCertificate className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+              <p className=' text-left text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I am very glad <b>(and proud of myself)</b> to show some of the courses that I've been taking in the last few months, here is a brief summary:
               </p>
             </div>
@@ -298,8 +298,8 @@ function App() {
           <section className='pb-24 lg:px-64'>
             <div>
             <h3 className='text-3xl py-5 '>Checkout my GitHub!</h3>
-            <div className='flex justify-center'><FiGithub className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+            <div className=' flex justify-center'><FiGithub className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
+              <p className=' text-left text-md md:text-xl py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I'm always learning new things. Here you will find some projects like this exact website that I created using React and Tailwind, and deployed using nginx in a docker container running on a Ubuntu server. Also there are some HackerRank code challenges (in python) and Linux challenges.
               </p>
             </div>

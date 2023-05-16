@@ -7,15 +7,18 @@
 // Icons
 import { useState } from 'react';
 import {BsChevronCompactDown, BsChevronCompactUp} from 'react-icons/bs';
+import {MdBatteryFull, MdOutlineBattery0Bar} from 'react-icons/md'
 
 const expBars = (level) => {
     var bars = []
     for (var i=0; i<level; i++){
-        bars.push(<span key={i} className="min-w-4 h-5 border-2 dark:bg-green-600 bg-cyan-500 dark:border-green-700 border-cyan-500 mx-0.5">&nbsp;</span>)
+        bars.push(<MdBatteryFull key={i} className=' h-5 w-5 dark:text-green-600 text-cyan-500'/>)
+        // bars.push(<span key={i} className="min-w-4 h-5 border-2 dark:bg-green-600 bg-cyan-500 dark:border-green-700 border-cyan-500 ">&nbsp;</span>)
     }
 
     for (i=5; i>level; i--){
-        bars.push(<span key={i} className="min-w-4 h-5 border-2 dark:border-green-700 border-cyan-500 mx-0.5">&nbsp;</span>)
+        bars.push(<MdOutlineBattery0Bar key={i} className='h-5 w-5 dark:text-green-600 text-cyan-500'/>)
+        // bars.push(<span key={i} className="min-w-4 h-5 border-2 dark:border-green-700 border-cyan-500 mx-0.5">&nbsp;</span>)
     }
     return bars;
 }
@@ -29,11 +32,11 @@ const SkillCard = (props)  => {
             <div className='mb-3 flex justify-center flex-col'>
                 <div className=" my-1"> 
                     <p className="mr-3" > Experience: </p> 
-                    {expBars(props.exp)} 
+                    <div className='flex justify-center m-2'>{expBars(props.exp)} </div>
                 </div>
                 <div className=" my-1"> 
                     <p className="mr-3" > Knowledge: </p> 
-                    {expBars(props.know)} 
+                    <div className='flex justify-center m-2'>{expBars(props.know)} </div>
                 </div>
             </div>
 
