@@ -27,7 +27,7 @@ const SkillCard = (props)  => {
     const [expand, setExpand] = useState(false)
 
     return (
-        <div className="px-1 py-4 my-2 mx-2 h-min w-1/2 text-center shadow-lg rounded border dark:hover:border-green-600 hover:border-2 hover:border-cyan-500  transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
+        <div className="px-1 py-4 my-2 mx-2 h-min lg:w-48 w-4/5 text-center shadow-lg rounded border dark:hover:border-green-600 hover:border-2 hover:border-cyan-500  transition-shadow  dark:bg-zinc-800 dark:border-lime-900">
             <div className="mb-3"><b>{props.name}</b></div>
             <div className='mb-3 flex justify-center flex-col'>
                 <div className=" my-1"> 

@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.59235fd6.css",
-    "main.js": "/static/js/main.ccc0ccac.js",
+    "main.css": "/static/css/main.9280a7a8.css",
+    "main.js": "/static/js/main.8fd1c7c2.js",
     "static/js/787.a2cb61a6.chunk.js": "/static/js/787.a2cb61a6.chunk.js",
     "static/media/Well-Architected-Framework.png": "/static/media/Well-Architected-Framework.ff161046d1bc1866b0d7.png",
     "static/media/Cloud_Practicioner_Essentials.png": "/static/media/Cloud_Practicioner_Essentials.cbc95a1a59972b32c91c.png",
     "static/media/Linux_sys_admin.png": "/static/media/Linux_sys_admin.a6051092cbde9d3bb816.png",
     "static/media/github.png": "/static/media/github.b733342ed0cac683491a.png",
     "static/media/support.png": "/static/media/support.ebf816975d506b95ae96.png",
+    "static/media/AWS_CCP_Badge.png": "/static/media/AWS_CCP_Badge.7243959475d95b116a82.png",
     "static/media/memoji_me.png": "/static/media/memoji_me.3151d45df8ff586a8b78.png",
     "static/media/about_me.jpg": "/static/media/about_me.607979d7858a8a752e0b.jpg",
     "static/media/ba.png": "/static/media/ba.22f5242771e423ff726b.png",
     "static/media/Burtons.otf": "/static/media/Burtons.c46a2405716f236c4a9a.otf",
     "static/media/Python.png": "/static/media/Python.97ea1024bf05d0cc9a92.png",
+    "static/media/AWS_CCP.png": "/static/media/AWS_CCP.866fe0e3ea89fdbbc2f2.png",
     "static/media/dev.png": "/static/media/dev.c24d41c8d9a1a208c646.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.59235fd6.css.map": "/static/css/main.59235fd6.css.map",
-    "main.ccc0ccac.js.map": "/static/js/main.ccc0ccac.js.map",
+    "main.9280a7a8.css.map": "/static/css/main.9280a7a8.css.map",
+    "main.8fd1c7c2.js.map": "/static/js/main.8fd1c7c2.js.map",
     "787.a2cb61a6.chunk.js.map": "/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59235fd6.css",
-    "static/js/main.ccc0ccac.js"
+    "static/css/main.9280a7a8.css",
+    "static/js/main.8fd1c7c2.js"
   ]
 }

@@ -169,8 +169,8 @@ function App() {
                 An easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
               </p>
 
-              <div className='lg:flex lg:flex-wrap mt-6'>  
-                <div className='flex lg:w-96 justify-around'>
+              <div className='flex flex-col lg:flex-row items-center lg:items-start lg:justify-start lg:flex-wrap mt-6'>  
+                {/* <div className='flex lg:w-96 justify-around'> */}
                   <SkillCard 
                     name="Linux" 
                     exp={3} 
@@ -184,9 +184,9 @@ function App() {
                     know={4} 
                     topics={["Dictionaries","Algorithms","Lists","Objects"]}
                   />
-                </div>
+                {/* </div> */}
 
-                <div className='flex lg:w-96 justify-around'>
+                {/* <div className='flex lg:w-96 justify-around'> */}
                   <SkillCard 
                     name="React" 
                     exp={3} 
@@ -198,9 +198,9 @@ function App() {
                     exp={4} know={4} 
                     topics={["DOM manipulation", "CSS frameworks and tools (sass, tailwind)" , "Transitions / animations" , "Responsive design"]}
                   />
-                </div>
+                {/* </div> */}
 
-                <div className='flex lg:w-96 justify-around'>
+                {/* <div className='flex lg:w-96 justify-around'> */}
                   <SkillCard 
                     name="Material UI" 
                     exp={2} 
@@ -211,9 +211,9 @@ function App() {
                     exp={3} 
                     know={4} 
                   />
-                </div>
+                {/* </div> */}
 
-                <div className='flex lg:w-96 justify-around'>
+                {/* <div className='flex lg:w-96 justify-around'> */}
                   <SkillCard 
                     name="Git" 
                     exp={3} 
@@ -225,7 +225,7 @@ function App() {
                     know={3}
                     topics={["Creating, managing and accessing EC2 instances", "Creating an Amazon Load Balancer" , "Creating Security Groups and rules" , "Creating Auto-Scaling Groups", "Creating S3 Buckets", "Hosting web sites using S3" , "Creating EBS volumes and snapshots" , "Creating VPCs", "Creating Endpoints", "Creating Flow Logs" , "Creating a CloudFront CDNs " , "Creating a RDS connection with MySQL Workbench as engine", "Creating Dynamo tables using console"]}                  
                   />
-                </div>
+                {/* </div> */}
               </div>
           </section>
 
