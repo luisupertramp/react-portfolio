@@ -23,12 +23,14 @@ import dev from "./media/dev.png";
 import pythonCourse from "./media/certs/Python.png"
 import awsCourse from "./media/certs/Cloud_Practicioner_Essentials.png"
 import awsWellArch from "./media/certs/Well-Architected-Framework.png"
+import awsCCP from "./media/certs/AWS_CCP.png"
 import linuxSysAdm from "./media/certs/Linux_sys_admin.png"
 
 // Images
 import memoji from './media/memoji_me.png';
 import gitHub from "./media/github.png";
 import aboutMe from "./media/about_me.jpg";
+import awsBadge from "./media/AWS_CCP_Badge.png";
 
 import { useState } from 'react';
 
@@ -65,7 +67,7 @@ function App() {
             </nav>
 
             {/* Personal info */}
-            <div className=' text-left p-8 lg:px-64'>
+            <div className=' text-left p-8 lg:px-64 md:px-32'>
               <h2 className=' text-5xl py-2 text-cyan-500 dark:text-green-500 font-medium md:text-6xl'>Luis Pedroza</h2>
               <h3 className='text-2xl md:text-3xl'>Software engineer | Aspiring DevOps / Cloud Engineer</h3>
               <div className='lg:py-10'>
@@ -79,9 +81,18 @@ function App() {
               </div>
             </div>
 
-            {/* Avatar */}
-            <div className='relative mx-auto bg-gradient-to-b from-cyan-500  dark:from-green-500 rounded-full w-60 h-60 mt-1 '>
-              <img src={memoji} width={180} height={180} className="mx-auto pt-3"/>
+            {/* Avatar and AWS Badge*/}
+            <div className="flex flex-col gap-10 lg:flex-row lg:justify-center md:px-32">
+
+              {/* Avatar */}
+              <div className='mx-auto lg:m-0 relative bg-gradient-to-b from-cyan-500  dark:from-green-500 rounded-full w-60 h-60 my-1 '>
+                <a href="https://www.linkedin.com/in/luispedrozaa/" target={'_blank'} ><img src={memoji} width={180} height={180} className="mx-auto pt-3 transition transform hover:scale-105"/></a>
+              </div>
+              
+              {/* Badge */}
+              <div className='mx-auto lg:m-0 flex justify-center w-60'>
+                <a href="https://www.credly.com/badges/1886a701-4cc5-413f-926c-0385bff12443" target={'_blank'} ><img src={awsBadge} className='transition transform hover:scale-105' width={215} height={215} /></a>
+              </div>
             </div>
 
             {/* Icons */}
@@ -93,7 +104,7 @@ function App() {
           
           {/* Professional experience */}
           <section className='pb-24'>
-            <div className='lg:px-64 py-5'>
+            <div className='lg:px-64 md:px-32 py-5'>
               <h3 className='text-3xl py-5'>Professional experience</h3>
               <div className='flex justify-center'><HiOutlineDesktopComputer className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
               <div className='text-left'>
@@ -151,14 +162,14 @@ function App() {
           </section>
 
           {/* Skills */}
-          <section className='pb-24 lg:px-64' >
+          <section className='pb-24 lg:px-64 md:px-32' >
               <h3 className='text-3xl py-5'>Skills</h3>
               <div className='flex justify-center'><BiAtom className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
               <p className=' text-left mx-auto text-md md:text-xl pt-5 leading-8 text-gray-800  dark:text-zinc-200  '>
                 An easy way to understand my skill level is by considering two areas: <b>expertise</b> (in a job position or personal project) and <b>knowledge</b> (from courses I've taken and not necessarily applied in the professional field)
               </p>
-              <div className='lg:flex lg:gap-0.5 lg:flex-wrap lg:justify-center mt-6'>
-                
+
+              <div className='lg:flex lg:flex-wrap mt-6'>  
                 <div className='flex lg:w-96 justify-around'>
                   <SkillCard 
                     name="Linux" 
@@ -223,13 +234,21 @@ function App() {
             <div>
               <h3 className='text-3xl py-7 '>Courses and Certifications</h3>
               <div className='flex justify-center'><TbFileCertificate className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
-              <p className=' text-left text-md md:text-xl lg:px-64 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
+              <p className=' text-left text-md md:text-xl lg:px-64 md:px-32 py-5 leading-8 text-gray-800 dark:text-zinc-200'>
                 I am very glad <b>(and proud of myself)</b> to show some of the courses that I've been taking in the last few months, here is a brief summary:
               </p>
             </div>
 
             {/* Course component */}
             <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap lg:justify-center'>
+              
+              {/* AWS CCP */}
+              <Courses 
+                title = "AWS Certified Cloud Practitioner"
+                cert = {awsCCP}
+                desc = "The AWS Certified Cloud Practitioner offers a foundational understanding of AWS Cloud concepts, services, and terminology. This is a good starting point for people in non-technical roles with no prior IT or cloud experience or for those with on-premises IT experience looking for basic AWS Cloud fluency."
+                topics = {["Cloud Concepts: Benefits and Cloud Architecture Design Principles","Security and Compliance: IAM, Shared Responsability Model","Compute Resources: EC2, ELB, Lambda, ECS, EKS, etc.","Storage: S3, EBS, EFS","Networking: VPC, ACL's and Security Groups, CloudFront","Route 53","Databases: RDS, Redshift, DynamoDB, Neptune, ElastiCache","Monitoring: CloudTrail, CloudWatch","Support, Billing and Pricing"]}
+              />
               
               {/* Linux */}
               <Courses 
@@ -249,33 +268,33 @@ function App() {
               />
 
               {/* AWS Cloud Practitioner */}
-              <Courses 
+              {/* <Courses 
                 title = "AWS Cloud Practitioner Essentials Course"
                 cert = {awsCourse}
                 desc = "This course contains a general understanding of the AWS Cloud, regardless of your specific technical role. It provides a detailed overview of cloud concepts and AWS services, security, architecture, pricing, and support. The course also helps you prepare for the AWS Certified Cloud Practitioner exam."
                 topics = {["AWS cloud: basic general infrastructure","Key services of the AWS platform","Basic architectural principles","Basic security and compliance aspects of the AW","Billing, account management and pricing models","Documentation or technical assistance","AWS Cloud Value Proposition","basic/core features of performing deployments and tasks in the AWS Cloud"]}
-              />
+              /> */}
 
               {/* AWS Well-Architected */}
-              <Courses 
+              {/* <Courses 
                 title = "AWS Well-Architected Course"
                 cert = {awsWellArch}
                 desc = "This course is designed to provide a deep dive into the AWS Well-Architected Framework and its five pillars. It is divided into eight modules, which include overviews of the AWS Well-Architected Framework, as well as the Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization pillars."
                 topics = {["Pillars, features, and common uses of the Well-Architected Framework.", "design principles, key services, and best practices for each pillar", "How to use the Well-Architected Framework and the AWS Well-Architected Tool to review your architecture."]}
-              />
+              /> */}
 
-              <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>DISCLAIMER: AWS Certificates of Completion are not from the official Certificate Exams (yet) but still, from preparation courses of the AWS Skill Builder web site. </span>
+              {/* <span className='mx-auto text-xs md:text-sm text-cyan-500 dark:text-green-500 italic font-semibold'>DISCLAIMER: AWS Certificates of Completion are not from the official Certificate Exams (yet) but still, from preparation courses of the AWS Skill Builder web site. </span> */}
               
             </div>
           </section>
 
           {/* About me */}
           <section className='pb-24'>
-            <div className='lg:px-64'>
+            <div className='lg:px-64 md:px-32'>
               <h3 className='text-3xl py-5 '>About me</h3>
               <div className='flex justify-center'><HiOutlineRocketLaunch className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
               <div className='lg:justify-center lg:flex lg:gap-8 lg:mt-10'>
-                <div className='lg:max-w-7xl lg:text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
+                <div className='lg:max-w-7xl text-start lg:flex lg:flex-col lg:justify-between lg:basis-1/2'>
                   <div>
                     <p className='text-md md:text-xl py-5 leading-8 lg:leading-9 text-gray-800 dark:text-zinc-200'>
                       I am 27 years old, Mexican software engineer. Graduated from the <a className='underline text-cyan-600 dark:text-green-500' href="https://upa.edu.mx">Universidad Politécnica de Aguascalientes</a>, where I studied the program "Information Strategic Systems Engineering" and got an specialization in Networks and Telecommunications, in 2017.
@@ -295,7 +314,7 @@ function App() {
           </section>
 
           {/* GitHub */}
-          <section className='pb-24 lg:px-64'>
+          <section className='pb-24 lg:px-64 md:px-32'>
             <div>
             <h3 className='text-3xl py-5 '>Checkout my GitHub!</h3>
             <div className=' flex justify-center'><FiGithub className='dark:text-green-500 text-cyan-500 h-12 w-12'/></div>
